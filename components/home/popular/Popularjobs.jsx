@@ -7,7 +7,7 @@ import {
 import ShowAll from './ShowAll'
 import styles from './popularjobs.style'
 import { COLORS, SIZES } from '../../../constants'
-import PopularJobCar from '../../common/cards/popular/PopularJobCard'
+import PopularJobCard from '../../common/cards/popular/PopularJobCard'
 
 import useFetch from '../../../hook/useFetch'
 
@@ -21,6 +21,7 @@ const Popularjobs = () => {
     }
   )
 
+  console.log(data)
 
   return (
     <View style={styles.container}>
@@ -40,11 +41,10 @@ const Popularjobs = () => {
         ):(
 
           <FlatList 
-            data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
+            data={data}
             renderItem={({ item }) => (
-              <PopularJobCar 
+              <PopularJobCard
                 item={item}
-              
               />
             )}
             keyExtractor={item => item?.job_id}
