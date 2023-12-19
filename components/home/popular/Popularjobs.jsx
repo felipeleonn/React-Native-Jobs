@@ -23,8 +23,6 @@ const Popularjobs = () => {
 
   
 
-  console.log(data)
-
   return (
     <View style={styles.container}>
       <View style={styles.header}>
