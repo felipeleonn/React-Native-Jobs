@@ -25,9 +25,8 @@ const JobDetails = () => {
 
   const onRefresh = useCallback(() => {
     setRefreshing(true);
-    setTimeout(() => {
-      setRefreshing(false);
-    }, 2000);
+    refetch()
+    setRefreshing(false)
   }, []);
 
 
